@@ -117,7 +117,7 @@ int main() {
     scanf_s("%d", &server_choice);
 
     // 检查服务器编号是否有效
-    int server_count = cJSON_GetArraySize(json);
+    const int server_count = cJSON_GetArraySize(json);
     if (server_choice < 1 || server_choice > server_count) {
         printf("无效的服务器编号！\n");
         cJSON_Delete(json);
@@ -126,7 +126,7 @@ int main() {
     }
 
     // 3. 根据编号选择服务器
-    cJSON *selected_server = cJSON_GetArrayItem(json, server_choice - 1);
+    const cJSON *selected_server = cJSON_GetArrayItem(json, server_choice - 1);
     const char *selected_server_name = selected_server->string;
     const cJSON *host = cJSON_GetObjectItemCaseSensitive(selected_server, "Host");
 
