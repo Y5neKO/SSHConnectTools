@@ -1,0 +1,16 @@
+{
+	"Aliyun1": {
+		"Host": "xx.xx.xx.xx",
+		"Port": 22,
+		"Username": [
+			"root"
+		]
+	},
+	"Tencent1": {
+		"Host": "xx.xx.xx.xx",
+		"Port": 22,
+		"Username": [
+			"ubuntu"
+		]
+	}
+}
